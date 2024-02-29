@@ -57,7 +57,8 @@ def home(request):
          print('###### ',e)
          return HttpResponse("ERROR - Formulaire invalide")
      
-        
+# Creation views actualites
+         
         
 # Create views Documents
 def doc(request):
@@ -149,15 +150,20 @@ def blog_interne(request):
          return HttpResponse("ERROR - Formulaire invalide")
 
 # Create views Blog
-def service(request):
+def projet(request):
     try:
+        txtprojetitre1= TextProjetParagraph1.objects.all()
+        txtparaprojet1= TextProjetParagraph1.objects.all()
         imageservice = ConfigImageigf.objects.get(pk=6)
         context={
             "titre":"service",
-            "image":imageservice
+            "image":imageservice,
+            "txtprojetitre1":txtprojetitre1,
+            "txtparaprojet1":txtparaprojet1
+           
         }     
         # Create a response
-        response = TemplateResponse(request,'services.html', context)  
+        response = TemplateResponse(request,'projets.html', context)  
         
         # Return the response
         return response
@@ -166,22 +172,6 @@ def service(request):
          return HttpResponse("ERROR - Formulaire invalide")
     
 
-# Create views Blog
-def contact(request):
-    try:
-      
-        context={
-            "titre":"contact",
-        }     
-        # Create a response
-        response = TemplateResponse(request,'contact.html', context)  
-        
-        # Return the response
-        return response
-    except Exception as e:
-         print('###### ',e)
-         return HttpResponse("ERROR - Formulaire invalide")
-    
 
 # Create views Annonce Accueil
 def actu_accueil(request):
@@ -272,7 +262,7 @@ def formajout_doc(request):
         # Code exécuté si aucune exception n'est rencontrée
         pass
 
-# Formulaire Contact
+# Formulaire Suggestion
 def contactform(request):
     print('je suis forte')
     try:
@@ -280,7 +270,7 @@ def contactform(request):
         if request.method == "POST":
             form = contform(request.POST, request.FILES)
             if form.is_valid():
-                p = Contact()
+                p = Suggestion()
                 p.nom = form.cleaned_data["nom"]
                 p.email = form.cleaned_data["email"]
                 p.subject = form.cleaned_data["subject"]

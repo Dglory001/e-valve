@@ -8,7 +8,7 @@ from django import forms
 
 class contform(ModelForm):
     class Meta:
-        model=models.Contact
+        model=models.Suggestion
         fields=['nom', 'email', 'subject', 'message']
         widgets= {
             "nom": forms.TextInput(attrs={'class':'form-control text-black'}),

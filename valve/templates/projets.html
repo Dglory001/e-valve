@@ -9,7 +9,7 @@
 					<div class="row">
 						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
 							<span class="heading-meta">Services</span>
-							<h2 class="colorlib-heading">Dans cette zone il sera l'objet d'exposer les différents services de l'Inspection Générale de Finances</h2>
+							<h2 class="colorlib-heading">Dans cette zone il sera l'objet d'exposer les différents projets de l'Inspection Générale de Finances</h2>
 						</div>
 					</div>
 					<div class="row row-bottom-padded-md">
@@ -21,11 +21,15 @@
 											<i class="flaticon-worker"></i>
 										</div>
 										<div class="colorlib-text">
-											<h3>Les avancés de la Division  Informatique</h3>
-											<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+											<h3>{% for txt in txtprojetitre1%}
+						                           <P>{{txt.titre1}}</P>
+						                        {%endfor%}</h3>
+											{% for txt in txtparaprojet1%}
+						                           <P>{{txt.paragraphe1}}</P>
+						                    {%endfor%}
 										</div>
 									</div>
-
+                                     
 									<div class="colorlib-feature animate-box" data-animate-effect="fadeInLeft">
 										<div class="colorlib-icon">
 											<i class="flaticon-sketch"></i>
@@ -66,7 +70,7 @@
 					</div>
 					<div class="row">
 						<div class="col-md-4">
-							<a href="{% url 'service'%}" class="services-wrap animate-box" data-animate-effect="fadeInRight">
+							<a href="{% url 'projet'%}" class="services-wrap animate-box" data-animate-effect="fadeInRight">
 								<div class="services-img" style="background-image: url('{{ image.imageservice1.url }}')" alt="{{ image.imageservice1.alt_text }}');"></div>
 								<div class="desc">
 									<h3>Rencotre des Experts &amp; Inspecteurs de Finances</h3>
@@ -74,7 +78,7 @@
 							</a>
 						</div>
 						<div class="col-md-4">
-							<a href="{% url 'service'%}" class="services-wrap animate-box" data-animate-effect="fadeInRight">
+							<a href="{% url 'projet'%}" class="services-wrap animate-box" data-animate-effect="fadeInRight">
 								<div class="services-img" style="background-image: url('{{ image.imageservice2.url }}')" alt="{{ image.imageservice2.alt_text }}');"></div>
 								<div class="desc">
 									<h3>Réunion des Cadres</h3>
@@ -82,7 +86,7 @@
 							</a>
 						</div>
 						<div class="col-md-4">
-							<a href="{% url 'service'%}"class="services-wrap animate-box" data-animate-effect="fadeInRight">
+							<a href="{% url 'projet'%}"class="services-wrap animate-box" data-animate-effect="fadeInRight">
 								<div class="services-img" style="background-image: url('{{ image.imageservice3.url }}')" alt="{{ image.imageservice3.alt_text }}');"></div>
 								<div class="desc">
 									<h3>Réunion des Inspecteurs de Finances</h3>
@@ -103,8 +107,7 @@
 					</div>
 					<div class="row">
 						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<p class="colorlib-lead"> cette page présente les différents services de notre institution. Ce valve numérique joue un rôle crucial en matière d'information, d'accessibilité, d'expérience utilisateur, de communication, d'efficacité et d'optimisation.
-.</p>
+							<p class="colorlib-lead"> cette page présente les différents services de notre institution. Ce valve numérique joue un rôle crucial en matière d'information, d'accessibilité, d'expérience utilisateur, de communication, d'efficacité et d'optimisation.</p>
 							<p><a href="#" class="btn btn-primary btn-learn">L'IGF & ses services!</a></p>
 						</div>
 						

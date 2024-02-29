@@ -63,6 +63,8 @@ CATEGORIE_ACTU=[
 
 ]
 
+
+
 # Documents
 class Document(models.Model):
     nomdocument = models.CharField(max_length = 250, null = True, blank = True)
@@ -83,9 +85,10 @@ class Actualite(models.Model):
     image = models.ImageField(upload_to='images/%Y/%m/%d/')
     def __str__(self):
         return str(self.titre)
-    
-#Contact
-class Contact(models.Model):
+
+
+# Suggestion
+class Suggestion(models.Model):
     nom=models.CharField(max_length = 250, null = True, blank = True)
     email=models.EmailField(blank=True,null=True)
     subject=models.CharField(max_length = 250, null = True, blank = True)
@@ -93,7 +96,7 @@ class Contact(models.Model):
     def __str__(self):
         return str(self.nom)
 
-    
+      
 
 
 # Images
@@ -163,6 +166,31 @@ class TextAnnoncesaft(models.Model):
 
     def __str__(self):
         return str(self.blocsaft1)
+    
+class TextProjetParagraph1(models.Model):
+    titre1=models.CharField(max_length = 250, null = True, blank = True)
+    paragraphe1=models.TextField( null = True, blank = True)
+    def __str__(self):
+        return str(self.titre1)
+    
+class TextProjetParagraph2(models.Model):
+    titre2=models.CharField(max_length = 250, null = True, blank = True)
+    paragraphe2=models.TextField( null = True, blank = True)
+    def __str__(self):
+        return str(self.titre2)
+
+class TextProjetParagraph3(models.Model):
+    titre3=models.CharField(max_length = 250, null = True, blank = True)
+    paragraphe3=models.TextField( null = True, blank = True)
+    def __str__(self):
+        return str(self.titre3)  
+    
+
+class TextProjetParagraph4(models.Model):
+    titre4=models.CharField(max_length = 250, null = True, blank = True)
+    paragraphe4=models.TextField( null = True, blank = True)
+    def __str__(self):
+        return str(self.titre4)  
 
 class data_toggleSaft(models.Model):
     infodediecadre=models.TextField(null = True, blank = True)
