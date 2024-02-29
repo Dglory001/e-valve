@@ -1,0 +1,117 @@
+{% extends 'layout/layout.html'%}
+{% load static %}
+{%block content%}
+
+
+		<div id="colorlib-main">
+			<div class="colorlib-services">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">Services</span>
+							<h2 class="colorlib-heading">Dans cette zone il sera l'objet d'exposer les différents services de l'Inspection Générale de Finances</h2>
+						</div>
+					</div>
+					<div class="row row-bottom-padded-md">
+						<div class="col-md-6">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="colorlib-feature animate-box" data-animate-effect="fadeInLeft">
+										<div class="colorlib-icon">
+											<i class="flaticon-worker"></i>
+										</div>
+										<div class="colorlib-text">
+											<h3>Les avancés de la Division  Informatique</h3>
+											<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+										</div>
+									</div>
+
+									<div class="colorlib-feature animate-box" data-animate-effect="fadeInLeft">
+										<div class="colorlib-icon">
+											<i class="flaticon-sketch"></i>
+										</div>
+										<div class="colorlib-text">
+											<h3>La gestion efficace des finances par la Division Finances</h3>
+											<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="colorlib-feature animate-box" data-animate-effect="fadeInLeft">
+										<div class="colorlib-icon">
+											<i class="flaticon-engineering"></i>
+										</div>
+										<div class="colorlib-text">
+											<h3>L'implication des auditeurs dans l'accompagnement des Inspecteurs</h3>
+											<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+										</div>
+									</div>
+
+									<div class="colorlib-feature animate-box" data-animate-effect="fadeInLeft">
+										<div class="colorlib-icon">
+											<i class="flaticon-crane"></i>
+										</div>
+										<div class="colorlib-text">
+											<h3>La gestion efficace du patrimoine de l'Inspection Générale de Finances par la Division Patrimoine</h3>
+											<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<a href="{% url 'service'%}" class="services-wrap animate-box" data-animate-effect="fadeInRight">
+								<div class="services-img" style="background-image: url('{{ image.imageservice1.url }}')" alt="{{ image.imageservice1.alt_text }}');"></div>
+								<div class="desc">
+									<h3>Rencotre des Experts &amp; Inspecteurs de Finances</h3>
+								</div>
+							</a>
+						</div>
+						<div class="col-md-4">
+							<a href="{% url 'service'%}" class="services-wrap animate-box" data-animate-effect="fadeInRight">
+								<div class="services-img" style="background-image: url('{{ image.imageservice2.url }}')" alt="{{ image.imageservice2.alt_text }}');"></div>
+								<div class="desc">
+									<h3>Réunion des Cadres</h3>
+								</div>
+							</a>
+						</div>
+						<div class="col-md-4">
+							<a href="{% url 'service'%}"class="services-wrap animate-box" data-animate-effect="fadeInRight">
+								<div class="services-img" style="background-image: url('{{ image.imageservice3.url }}')" alt="{{ image.imageservice3.alt_text }}');"></div>
+								<div class="desc">
+									<h3>Réunion des Inspecteurs de Finances</h3>
+								</div>
+							</a>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+
+			<div id="get-in-touch" class="colorlib-bg-color">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<h2>Tout savoir sur les différents services que constituent l'IGF</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<p class="colorlib-lead"> cette page présente les différents services de notre institution. Ce valve numérique joue un rôle crucial en matière d'information, d'accessibilité, d'expérience utilisateur, de communication, d'efficacité et d'optimisation.
+.</p>
+							<p><a href="#" class="btn btn-primary btn-learn">L'IGF & ses services!</a></p>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock%}	

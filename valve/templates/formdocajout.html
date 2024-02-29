@@ -1,0 +1,77 @@
+{% extends "layout/layout.html" %}
+{% load static%}
+{% block content %}
+
+
+
+					<div id="colorlib-main">
+
+			<div class="colorlib-contact">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">Formulaire d'ajout documents</span>
+							<h2 class="colorlib-heading">Ajout Documents</h2>
+						</div>
+					</div>
+					<div class="row">
+				<div class="col-md-7">
+  <div class="row">
+    <div class="col-md-10 offset-md-1 animate-box" data-animate-effect="fadeInLeft">
+   
+
+        <form action="{% url 'formajout_doc'%}" method="post" enctype="multipart/form-data"> {% comment %} Cette balise HTML définit un formulaire.L'attribut action indique l'URL vers laquelle les données du formulaire seront envoyées lorsqu'il est soumis. Dans ce cas, l'URL est générée par la balise.{% endcomment %}
+         {% csrf_token %}
+         {{ form.as_p }}
+
+
+          {% comment %}<div class="form-group">
+  <label for="nomdocument">Nom du document :</label>
+  <input type="text" class="form-control" id="nomdocument" name="nomdocument" placeholder="Entrez le nom du document">
+</div>
+<div class="form-group">
+  <label for="fichier">Fichier :</label>
+  <input type="file" class="form-control" id="fichier" name="fichier"> </div>
+<div class="form-group">
+  <label for="type_doc">Type de document :</label>
+  <input type="text" class="form-control" id="type_doc" name="type_doc" placeholder="Sélectionnez le type de document">
+</div>{% endcomment %}
+
+              <div class="form-group">
+                  <div class="form-group">
+          <button type="submit" class="btn btn-primary btn-send-message">Envoyer</button>
+        </div>
+       
+      </form>
+    </div>
+  </div>
+</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div id="get-in-touch" class="colorlib-bg-color">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<h2>Que ceux-ci soient retenus de tous!!</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<p class="colorlib-lead">La confidentialité des informations est un élément crucial au sein de toute institution. Elle vise à protéger les données personnelles et sensibles des individus contre tout accès, utilisation ou divulgation non autorisés. 
+
+C'est pourquoi toute information partagée doit rester en interne.</p>
+							<p><a href="#" class="btn btn-primary btn-learn">Ajout Actualité ou Communiqué!</a></p>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+{% endblock%} 

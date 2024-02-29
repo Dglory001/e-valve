@@ -1,0 +1,63 @@
+{% extends "layout/layout.html" %}
+{% load static%}
+{% block content %}
+
+
+
+					<div id="colorlib-main">
+
+			<div class="colorlib-contact">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">Formulaire d'ajout d'actualités</span>
+							<h2 class="colorlib-heading">Ajout Actualités</h2>
+						</div>
+					</div>
+					<div class="row">
+				<div class="col-md-7">
+  <div class="row">
+    <div class="col-md-10 offset-md-1 animate-box" data-animate-effect="fadeInLeft">
+
+        <form action="{% url 'form_actual'%}" method="post"  enctype="multipart/form-data">
+         {% csrf_token %}
+         {{ form }}
+
+         
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary btn-send-message">Envoyer</button>
+        </div>
+       
+      </form>
+    </div>
+  </div>
+</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div id="get-in-touch" class="colorlib-bg-color">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<h2>Que ceux-ci soient retenus de tous!!</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<p class="colorlib-lead">La confidentialité des informations est un élément crucial au sein de toute institution. Elle vise à protéger les données personnelles et sensibles des individus contre tout accès, utilisation ou divulgation non autorisés. 
+
+C'est pourquoi toute information partagée doit rester en interne.</p>
+							<p><a href="#" class="btn btn-primary btn-learn">Ajout Actualité ou Communiqué!</a></p>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+{% endblock%} 

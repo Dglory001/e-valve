@@ -1,0 +1,13 @@
+{% extends 'layout/layout.html'%}
+{% load static %}
+{%block content%}
+
+
+{% for document in documents %}
+    <li><a href="{% url 'telecharger_document' document.pk %}">{{ document.nom }}</a></li>
+{% endfor %}
+
+
+
+
+{% endblock%}

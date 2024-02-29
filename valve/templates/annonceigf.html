@@ -1,0 +1,142 @@
+{% extends 'layout/layout.html'%}
+{% load static %}
+{%block content%}
+
+
+		<div id="colorlib-main">
+
+			<div class="colorlib-about">
+				<div class="colorlib-narrow-content">
+					<div class="row row-bottom-padded-md">
+						<div class="col-md-6">
+							<img class="about-img animate-box" data-animate-effect="fadeInLeft" src="{{ image.imagepageigf.url }}" alt="{{ image.imagepageigf.alt_text }}">
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="about-desc">
+								<span class="heading-meta">Annonces & Communiqués pour le corps des Inspecteurs</span>
+								<h2 class="colorlib-heading">Chers Inspecteurs Générale des Finances,et Inspecteurs des Finances. Ceci vous concerne</h2>
+								{% for txt in textbloc%}
+						<P>{{txt.bloc1}}</P>
+						 {%endfor%}
+							</div>
+							<div class="row padding">
+								<div class="col-md-4 no-gutters animate-box" data-animate-effect="fadeInLeft">
+									<a href="#" class="steps active">
+										<p class="icon"><span><i class="icon-check"></i></span></p>
+										<h3>IGF-Chef <br> de Brigade</h3>
+									</a>
+								</div>
+								<div class="col-md-4 no-gutters animate-box" data-animate-effect="fadeInLeft">
+									<a href="#" class="steps">
+										<p class="icon"><span><i class="icon-check"></i></span></p>
+										<h3>Inspecteur Générale <br>de Finances</h3>
+									</a>
+								</div>
+								<div class="col-md-4 no-gutters animate-box" data-animate-effect="fadeInLeft">
+									<a href="#" class="steps">
+										<p class="icon"><span><i class="icon-check"></i></span></p>
+										<h3>Inspecteur de<br>Finances</h3>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+							<h2 class="colorlib-heading">History</h2>
+							{% for txt in textbloc%}
+						<P>{{txt.bloc2}}</P>
+						 {%endfor%}
+						</div>
+						<div class="col-md-8 animate-box" data-animate-effect="fadeInRight">
+							<div class="fancy-collapse-panel">
+								<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+									<div class="panel panel-default">
+									    <div class="panel-heading" role="tab" id="headingOne">
+									        <h4 class="panel-title">
+									            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Info dedié aux Chef des Brigades
+									            </a>
+									        </h4>
+									    </div>
+									    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+									         <div class="panel-body">
+									            <div class="row">
+										      		<div class="col-md-6">
+										      			{% for txt in textinfodedie%}
+						                                    <P>{{txt.infoDedie_chefBrig}}</P>
+						                                {%endfor%}
+										      		</div>
+										      		<div class="col-md-6">
+										      			{% for txt in textinfodedie%}
+						                                   <P>{{txt.infoDedie_chefBrig}}</P>
+						                                {%endfor%}
+										      		</div>
+										      	</div>
+									         </div>
+									    </div>
+									</div>
+									<div class="panel panel-default">
+									    <div class="panel-heading" role="tab" id="headingTwo">
+									        <h4 class="panel-title">
+									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Info dedié aux Inspecteurs Générale de Finances
+									            </a>
+									        </h4>
+									    </div>
+									    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+									        <div class="panel-body">
+									           {% for txt in textinfodedie%}
+						                            <P>{{txt.infoDedie_igf}}</P>
+						                        {%endfor%}
+													
+									        </div>
+									    </div>
+									</div>
+									<div class="panel panel-default">
+									    <div class="panel-heading" role="tab" id="headingThree">
+									        <h4 class="panel-title">
+									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Info dedié aux Inspecteurs des Finances
+									            </a>
+									        </h4>
+									    </div>
+									    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+									        <div class="panel-body">
+									            {% for txt in textinfodedie%}
+						                            <P>{{txt.infoDedie_if}}</P>
+						                        {%endfor%}
+													
+									        </div>
+									    </div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+		
+
+			<div id="get-in-touch" class="colorlib-bg-color">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<h2>Chers Inspecteurs, c'est ici que vous serez informés!</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<p class="colorlib-lead"> cette page présente les différents services de notre institution. Ce valve numérique joue un rôle crucial en matière d'information, d'accessibilité, d'expérience utilisateur, de communication, d'efficacité et d'optimisation.</p>
+							<p><a href="#" class="btn btn-primary btn-learn">Informez vous Ici!</a></p>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock%}
+
+
+

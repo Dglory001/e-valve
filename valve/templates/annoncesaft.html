@@ -1,0 +1,138 @@
+{% extends 'layout/layout.html'%}
+{% load static %}
+{%block content%}
+
+
+		<div id="colorlib-main">
+
+			<div class="colorlib-about">
+				<div class="colorlib-narrow-content">
+					<div class="row row-bottom-padded-md">
+						<div class="col-md-6">
+							<div class="about-img animate-box" data-animate-effect="fadeInLeft" style="background-image: url('{{ image.imagesaft.url }}')" alt="{{ image.imagesaft.alt_text }}');">
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="about-desc">
+								<span class="heading-meta">Annonces & Communiqués du SAFT</span>
+								<h2 class="colorlib-heading">Chers Cadres et Agents du SAFT, ceci vous concerne</h2>
+								v class="panel-body">
+								{% for txt in textblocsaft%}
+						          <P>{{txt.blocsaft1}}</P>
+						        {%endfor%}
+							</div>
+							<div class="row padding">
+								<div class="col-md-4 no-gutters animate-box" data-animate-effect="fadeInLeft">
+									<a href="#" class="steps active">
+										<p class="icon"><span><i class="icon-check"></i></span></p>
+										<h3>Cadres du  <br>Saft</h3>
+									</a>
+								</div>
+								<div class="col-md-4 no-gutters animate-box" data-animate-effect="fadeInLeft">
+									<a href="#" class="steps">
+										<p class="icon"><span><i class="icon-check"></i></span></p>
+										<h3>Collaborateurs du <br>Saft</h3>
+									</a>
+								</div>
+								<div class="col-md-4 no-gutters animate-box" data-animate-effect="fadeInLeft">
+									<a href="#" class="steps">
+										<p class="icon"><span><i class="icon-check"></i></span></p>
+										<h3>Situation des Sanctions des<br> Agents et Cadres du Saft</h3>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+							<h2 class="colorlib-heading">History</h2>
+							{% for txt in textblocsaft%}
+						          <P>{{txt.blocsaft2}}</P>
+						        {%endfor%}	
+						</div>
+						<div class="col-md-8 animate-box" data-animate-effect="fadeInRight">
+							<div class="fancy-collapse-panel">
+								<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+									<div class="panel panel-default">
+									    <div class="panel-heading" role="tab" id="headingOne">
+									        <h4 class="panel-title">
+									            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Info dedie aux Cadres du Saft
+									            </a>
+									        </h4>
+									    </div>
+									    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+									         <div class="panel-body">
+									            <div class="row">
+										      		<div class="col-md-6">
+								       {% for txt in textblocsaft%}
+						                <P>{{txt.blocsaft3}}</P>
+						               {%endfor%}	
+										      		</div>
+										      		
+										      	</div>
+									         </div>
+									    </div>
+									</div>
+									<div class="panel panel-default">
+									    <div class="panel-heading" role="tab" id="headingTwo">
+									        <h4 class="panel-title">
+									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Infos dedié aux Collaborateurs du Saft
+									            </a>
+									        </h4>
+									    </div>
+									    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+									        <div class="panel-body">
+									    {% for txt in textdatatoggle%}
+						                <P>{{txt.infodediecolla}}</P>
+						                {%endfor%}	
+													
+									        </div>
+									    </div>
+									</div>
+									<div class="panel panel-default">
+									    <div class="panel-heading" role="tab" id="headingThree">
+									        <h4 class="panel-title">
+									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Tout savoir sur les sanction
+									            </a>
+									        </h4>
+									    </div>
+									    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+									        <div class="panel-body">
+									    {% for txt in textdatatoggle%}
+						                <P>{{txt.infosenction}}</P>
+						                {%endfor%}	
+									        </div>
+									    </div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+		
+
+			<div id="get-in-touch" class="colorlib-bg-color">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<h2>Tout infos concernant le Saft</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<p class="colorlib-lead">cette page présente les différents services de notre institution. Ce valve numérique joue un rôle crucial en matière d'information, d'accessibilité, d'expérience utilisateur, de communication, d'efficacité et d'optimisation.</p>
+							<p><a href="#" class="btn btn-primary btn-learn">Informez vous Ici!</a></p>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+{% endblock%}
+
