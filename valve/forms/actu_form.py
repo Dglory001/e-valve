@@ -13,7 +13,7 @@ class actual_form(ModelForm):
             "Document":forms.Select(choices=models.DOCUMENT,attrs={'class':'form-control'}),
             "titre":forms.TextInput(attrs={'class':'form-control text-black'}),
             "contenu":forms.Textarea(attrs={'class':'form-control text-black'}),
-            "date_publication":forms.DateInput(attrs={'class':'form-control text-black'}),
+            "date_publication":forms.DateInput(attrs={'class':'form-control text-black','type':'date'}),
             "auteur":forms.Select(choices=models.AUTEURS,attrs={'class':'form-control'}),
             "categorie":forms.Select(choices=models.CATEGORIE_ACTU,attrs={'class':'form-control'}),
             "image":forms.FileInput(attrs={'class':'form-control text-black'})

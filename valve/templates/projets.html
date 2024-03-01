@@ -12,62 +12,29 @@
 							<h2 class="colorlib-heading">Dans cette zone il sera l'objet d'exposer les différents projets de l'Inspection Générale de Finances</h2>
 						</div>
 					</div>
-					<div class="row row-bottom-padded-md">
-						<div class="col-md-6">
-							<div class="row">
-								<div class="col-md-12">
-									<div class="colorlib-feature animate-box" data-animate-effect="fadeInLeft">
-										<div class="colorlib-icon">
-											<i class="flaticon-worker"></i>
-										</div>
-										<div class="colorlib-text">
-											<h3>{% for txt in txtprojetitre1%}
-						                           <P>{{txt.titre1}}</P>
-						                        {%endfor%}</h3>
-											{% for txt in txtparaprojet1%}
-						                           <P>{{txt.paragraphe1}}</P>
-						                    {%endfor%}
-										</div>
-									</div>
-                                     
-									<div class="colorlib-feature animate-box" data-animate-effect="fadeInLeft">
-										<div class="colorlib-icon">
-											<i class="flaticon-sketch"></i>
-										</div>
-										<div class="colorlib-text">
-											<h3>La gestion efficace des finances par la Division Finances</h3>
-											<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="row">
-								<div class="col-md-12">
-									<div class="colorlib-feature animate-box" data-animate-effect="fadeInLeft">
-										<div class="colorlib-icon">
-											<i class="flaticon-engineering"></i>
-										</div>
-										<div class="colorlib-text">
-											<h3>L'implication des auditeurs dans l'accompagnement des Inspecteurs</h3>
-											<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-										</div>
-									</div>
+			
+				<div class="row row-bottom-padded-md">
+    <div class="col-md-6">
+        <div class="row">
+            {% for item in txtprojetitre1 %}
+                <div class="col-md-12">
+                    <div class="colorlib-feature animate-box" data-animate-effect="fadeInLeft">
+                        <div class="colorlib-icon">
+                            <i class="flaticon-worker"></i>
+                        </div>
+                        <div class="colorlib-text">
+                            <h3>{{ item.titre1 }}</h3>
+                            <p>{{ item.paragraphe1 }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
 
-									<div class="colorlib-feature animate-box" data-animate-effect="fadeInLeft">
-										<div class="colorlib-icon">
-											<i class="flaticon-crane"></i>
-										</div>
-										<div class="colorlib-text">
-											<h3>La gestion efficace du patrimoine de l'Inspection Générale de Finances par la Division Patrimoine</h3>
-											<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+						
+
 					<div class="row">
 						<div class="col-md-4">
 							<a href="{% url 'projet'%}" class="services-wrap animate-box" data-animate-effect="fadeInRight">

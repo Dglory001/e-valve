@@ -133,10 +133,24 @@ def ann_saft(request):
 def blog_interne(request):
     try:
       
-        imageBloginterne =Configimageblog.objects.get(pk=1)
+        imageBlogint1 =Configimageblog1.objects.get(pk=1)
+        imageBlogint_all =Configimageblog1.objects.all()
+        titreblog1= Configimageblog1.objects.all()
+        parablog1= Configimageblog1.objects.all()
+        datblog1=Configimageblog1.objects.all()
+        
+
+
+       
+        
         context={
             "titre":"blog_interne",
-            "imageBloginterne":imageBloginterne
+            "imageBloginterne":imageBlogint1,
+            "titreblog1":titreblog1,
+            "paragrapheblog1":parablog1,
+            "datblog1":datblog1,
+            "imageBlogint_all":imageBlogint_all
+         
          
         }     
         # Create a response
@@ -152,14 +166,16 @@ def blog_interne(request):
 # Create views Blog
 def projet(request):
     try:
-        txtprojetitre1= TextProjetParagraph1.objects.all()
+        txtprojetitre1_all= TextProjetParagraph1.objects.all()
         txtparaprojet1= TextProjetParagraph1.objects.all()
+       
         imageservice = ConfigImageigf.objects.get(pk=6)
         context={
             "titre":"service",
             "image":imageservice,
-            "txtprojetitre1":txtprojetitre1,
-            "txtparaprojet1":txtparaprojet1
+            "txtprojetitre1":txtprojetitre1_all,
+            "txtparaprojet1":txtparaprojet1,
+           
            
         }     
         # Create a response

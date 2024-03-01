@@ -79,7 +79,7 @@ class Actualite(models.Model):
     Document=models.ForeignKey("Document",related_name="actualite" ,blank=True, null=True, on_delete=models.CASCADE)
     titre = models.CharField(max_length = 250, null = True, blank = True)
     contenu = models.TextField( null = True, blank = True)
-    date_publication  = models.DateField(blank=True, null=True)
+    date_publication = models.DateField(blank=True,null=True)
     auteur = models.CharField(max_length=250,choices=AUTEURS,null = True, blank = True)
     categorie = models.CharField(max_length=255,choices=CATEGORIE_ACTU, null=True, blank =True)
     image = models.ImageField(upload_to='images/%Y/%m/%d/')
@@ -126,16 +126,15 @@ class ConfigImageAccueil(models.Model):
     def __str__(self):
         return str(self.imageaccueil1)
     
-class Configimageblog(models.Model):
+class Configimageblog1(models.Model):
     imageblog1=models.ImageField(blank=True, null=True,upload_to='configImage/%Y/%m/%d/')
-    imageblog2=models.ImageField(blank=True, null=True,upload_to='configImage/%Y/%m/%d/')
-    imageblog3=models.ImageField(blank=True, null=True,upload_to='configImage/%Y/%m/%d/')
-    imageblog4=models.ImageField(blank=True, null=True,upload_to='configImage/%Y/%m/%d/')
-    imageblog5=models.ImageField(blank=True, null=True,upload_to='configImage/%Y/%m/%d/')
-    imageblog6=models.ImageField(blank=True, null=True,upload_to='configImage/%Y/%m/%d/')
-
+    titreblog1=models.CharField(max_length = 250, null = True, blank = True)
+    parablog1=models.TextField( null = True, blank = True)
+    dateblog1=models.DateField(auto_now_add=True,blank=True,null=True)
+    
     def __str__(self):
         return str(self.imageblog1)
+    
      
 class  TextAccueil(models.Model):
     paraphe1=models.TextField(null = True, blank = True)
@@ -173,24 +172,6 @@ class TextProjetParagraph1(models.Model):
     def __str__(self):
         return str(self.titre1)
     
-class TextProjetParagraph2(models.Model):
-    titre2=models.CharField(max_length = 250, null = True, blank = True)
-    paragraphe2=models.TextField( null = True, blank = True)
-    def __str__(self):
-        return str(self.titre2)
-
-class TextProjetParagraph3(models.Model):
-    titre3=models.CharField(max_length = 250, null = True, blank = True)
-    paragraphe3=models.TextField( null = True, blank = True)
-    def __str__(self):
-        return str(self.titre3)  
-    
-
-class TextProjetParagraph4(models.Model):
-    titre4=models.CharField(max_length = 250, null = True, blank = True)
-    paragraphe4=models.TextField( null = True, blank = True)
-    def __str__(self):
-        return str(self.titre4)  
 
 class data_toggleSaft(models.Model):
     infodediecadre=models.TextField(null = True, blank = True)
