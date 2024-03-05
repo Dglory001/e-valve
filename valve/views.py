@@ -28,9 +28,7 @@ from .models import Actualite
 # Create your views here.
 def home(request):
     try:
-        image1 = ConfigImage.objects.get(pk=4) 
-        image2 = ConfigImageAccueil.objects.get(pk=3)
-        image3 = ConfigImageAccueil.objects.get(pk=3)
+        imageindex = ConfigImage.objects.all()
         textehome1 = TextAccueil.objects.all()
    
         
@@ -39,9 +37,7 @@ def home(request):
         
         context={
             "titre":"home",
-            "image1":image1,
-            "image2":image2,
-            "image3":image3,
+            "imageindex":imageindex,
             "textehome1":textehome1,
            
         }     

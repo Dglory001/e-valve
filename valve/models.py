@@ -103,6 +103,7 @@ class Suggestion(models.Model):
 class ConfigImage(models.Model):
      icon=models.ImageField(upload_to="images/")
      iconInsp=models.ImageField(upload_to="images/")
+     imageindex=models.ImageField(upload_to="images/")
     
      def __str__(self):
         return str(self.icon)
@@ -117,15 +118,7 @@ class ConfigImageigf(models.Model):
      
      def __str__(self):
         return str(self.imagepageigf)
-     
-class ConfigImageAccueil(models.Model):
-    imageaccueil1=models.ImageField(blank=True, null=True,upload_to='configImage/%Y/%m/%d/')
-    imageaccueil2=models.ImageField(blank=True, null=True,upload_to='configImage/%Y/%m/%d/')
-    imageaccueil3=models.ImageField(blank=True, null=True,upload_to='configImage/%Y/%m/%d/')
-     
-    def __str__(self):
-        return str(self.imageaccueil1)
-    
+        
 class Configimageblog1(models.Model):
     imageblog1=models.ImageField(blank=True, null=True,upload_to='configImage/%Y/%m/%d/')
     titreblog1=models.CharField(max_length = 250, null = True, blank = True)
