@@ -169,8 +169,13 @@ class TextAnnoncesaft(models.Model):
 class TextProjetParagraph1(models.Model):
     titre1=models.CharField(max_length = 250, null = True, blank = True)
     paragraphe1=models.TextField( null = True, blank = True)
+    imagesProjet=models.ImageField(blank=True,null=True,upload_to='configImage/%Y/%m/%d/')
+    textImageProjet=models.CharField(max_length = 250, null = True, blank = True)
+
     def __str__(self):
         return str(self.titre1)
+
+
     
 
 class data_toggleSaft(models.Model):

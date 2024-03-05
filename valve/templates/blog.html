@@ -15,6 +15,7 @@
 					</div>
 				</div>
 			</div>
+			<div class="row row-bottom-padded-md"></div>
 					<div class="row">
 						{% for item in imageBlogint_all %}
 						<div class="col-md-4  animate-box" data-animate-effect="fadeInLeft">
@@ -22,15 +23,13 @@
 								<a href="{% url 'blog_interne'%}"  class="blog-img"><img  src="{{ item.imageblog1.url }}"  class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"/></a>
 								 
 									<h3>{{item.titreblog1}}</h3>
-									<h3>{{item.dateblog1}}</h3>
-									 
+									<h3>{{item.dateblog1}}</h3>	 
 						            <P>{{item.parablog1}}</P>
-							</div>
-						
+							</div>	
 						</div>
-						{%endfor%}
+						{% endfor %}
+						<h3> </h3>
 					</div>
-					
 					
 			<div id="get-in-touch" class="colorlib-bg-color">
 				<div class="colorlib-narrow-content">
@@ -44,7 +43,6 @@
 							<p class="colorlib-lead">Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
 							<p><a href="#" class="btn btn-primary btn-learn">Contact me!</a></p>
 						</div>
-						
 					</div>
 				</div>
 			</div>

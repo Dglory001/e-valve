@@ -138,11 +138,7 @@ def blog_interne(request):
         titreblog1= Configimageblog1.objects.all()
         parablog1= Configimageblog1.objects.all()
         datblog1=Configimageblog1.objects.all()
-        
-
-
-       
-        
+           
         context={
             "titre":"blog_interne",
             "imageBloginterne":imageBlogint1,
@@ -168,13 +164,17 @@ def projet(request):
     try:
         txtprojetitre1_all= TextProjetParagraph1.objects.all()
         txtparaprojet1= TextProjetParagraph1.objects.all()
+        imgprojet_all= TextProjetParagraph1.objects.all()
+        txtimageprojet_all=TextProjetParagraph1.objects.all()
+
        
-        imageservice = ConfigImageigf.objects.get(pk=6)
+       
         context={
             "titre":"service",
-            "image":imageservice,
             "txtprojetitre1":txtprojetitre1_all,
             "txtparaprojet1":txtparaprojet1,
+            "imgprojet_all":imgprojet_all,
+            "txtimageprojet_all":txtimageprojet_all
            
            
         }     

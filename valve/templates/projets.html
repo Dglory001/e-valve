@@ -13,55 +13,34 @@
 						</div>
 					</div>
 			
-				<div class="row row-bottom-padded-md">
-    <div class="col-md-6">
-        <div class="row">
-            {% for item in txtprojetitre1 %}
-                <div class="col-md-12">
-                    <div class="colorlib-feature animate-box" data-animate-effect="fadeInLeft">
-                        <div class="colorlib-icon">
+<div class="row row-bottom-padded-md">
+	{% for item in txtprojetitre1 %}
+    <div class="col-md-6">  
+        	<div class="colorlib-feature animate-box" data-animate-effect="fadeInLeft">
+                <div class="colorlib-icon">
                             <i class="flaticon-worker"></i>
                         </div>
+					<div class="projet-entry" >
                         <div class="colorlib-text">
                             <h3>{{ item.titre1 }}</h3>
                             <p>{{ item.paragraphe1 }}</p>
                         </div>
                     </div>
                 </div>
-            {% endfor %}
         </div>
+		{% endfor %}
     </div>
-</div>
-
-						
-
-					<div class="row">
-						<div class="col-md-4">
-							<a href="{% url 'projet'%}" class="services-wrap animate-box" data-animate-effect="fadeInRight">
-								<div class="services-img" style="background-image: url('{{ image.imageservice1.url }}')" alt="{{ image.imageservice1.alt_text }}');"></div>
-								<div class="desc">
-									<h3>Rencotre des Experts &amp; Inspecteurs de Finances</h3>
-								</div>
-							</a>
+			
+				<div class="row">
+						{% for item in imgprojet_all %}
+						<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+						<div class="projet-entry" >
+						  <a href="{% url 'projet'%}"  class="projet-img"><img  src="{{ item.imagesProjet.url }}"  class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"/></a>
+							<h3>{{item.textImageProjet}}</h3>	 	
 						</div>
-						<div class="col-md-4">
-							<a href="{% url 'projet'%}" class="services-wrap animate-box" data-animate-effect="fadeInRight">
-								<div class="services-img" style="background-image: url('{{ image.imageservice2.url }}')" alt="{{ image.imageservice2.alt_text }}');"></div>
-								<div class="desc">
-									<h3>Réunion des Cadres</h3>
-								</div>
-							</a>
 						</div>
-						<div class="col-md-4">
-							<a href="{% url 'projet'%}"class="services-wrap animate-box" data-animate-effect="fadeInRight">
-								<div class="services-img" style="background-image: url('{{ image.imageservice3.url }}')" alt="{{ image.imageservice3.alt_text }}');"></div>
-								<div class="desc">
-									<h3>Réunion des Inspecteurs de Finances</h3>
-								</div>
-							</a>
-						</div>
-					</div>
-					
+						{% endfor %}	
+						</div>	
 				</div>
 			</div>
 
