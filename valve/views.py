@@ -28,17 +28,18 @@ from .models import Actualite
 # Create your views here.
 def home(request):
     try:
-        imageindex = ConfigImage.objects.all()
+        imageindex_all = AccueilImages.objects.all()
         textehome1 = TextAccueil.objects.all()
-   
-        
-        
-
+        imageIndexPara_all= IndexImagesParagraphe.objects.all()
+        logoIgfhome=LogoImgIndex.objects.all()
         
         context={
             "titre":"home",
-            "imageindex":imageindex,
+            "imageindex_all":imageindex_all,
             "textehome1":textehome1,
+            "imgIndexPara":imageIndexPara_all,
+            "logoIgfhome":logoIgfhome
+          
            
         }     
         # Create a response

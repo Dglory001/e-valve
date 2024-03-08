@@ -73,6 +73,7 @@ class Document(models.Model):
 
     def __str__(self):
         return (self.nomdocument)
+    
 
 # Actualités
 class Actualite(models.Model):
@@ -96,18 +97,32 @@ class Suggestion(models.Model):
     def __str__(self):
         return str(self.nom)
 
-      
+
 
 
 # Images
 class ConfigImage(models.Model):
      icon=models.ImageField(upload_to="images/")
      iconInsp=models.ImageField(upload_to="images/")
-     imageindex=models.ImageField(upload_to="images/")
-    
      def __str__(self):
         return str(self.icon)
      
+
+class AccueilImages(models.Model):
+    imageindex=models.ImageField(upload_to="images/")
+    def __str__(self):
+        return str(self.imageindex)
+    
+class IndexImagesParagraphe(models.Model):
+    imageIndexPara=models.ImageField(upload_to="images/")
+    def __str__(self):
+        return str(self.imageIndexPara)
+
+class LogoImgIndex(models.Model):
+    logoigfIndex=models.ImageField(blank=True,null=True,upload_to='configImage/%Y/%m/%d/')
+    def __str__(self):
+        return str (self.logoigfIndex)
+    
 
 class ConfigImageigf(models.Model):
      imagepageigf=models.ImageField(upload_to="images/")
